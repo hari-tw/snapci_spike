@@ -1,4 +1,7 @@
 import org.junit.Test;
+
+import java.io.IOException;
+
 import static org.junit.Assert.*;
 
 /*
@@ -8,8 +11,9 @@ import static org.junit.Assert.*;
  * @author Hari, @date 30/6/15 6:53 PM
  */
 public class LibraryTest {
-    @Test public void testSomeLibraryMethod() {
+    @Test
+    public void testSomeLibraryMethod() throws IOException {
         Library classUnderTest = new Library();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+        assertEquals("should return connection string", "bla bla", classUnderTest.someLibraryMethod());
     }
 }
